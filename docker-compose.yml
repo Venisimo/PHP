@@ -1,0 +1,31 @@
+version: '3.3'
+services:
+        db:
+                container_name: db
+                image: mysql
+                restart: always
+                environment:
+                        MYSQL_ROOT_PASSWORD: 1234
+                ports:
+                        - 3306:3306
+                volumes:
+                        - db-data:/var/lib/mysql
+        apache:
+                container_name: my_apache
+                build:
+                        context: .
+                        dockerfile: Dockerfile
+                image: php:8-apache
+                restart: always
+                ports: 
+                        - 8000:80
+                volumes:
+                        - .:/var/www/html
+        admin:
+                container_name: phpmyadmin
+                image: phpmyadmin
+                restart: always
+                environment:
+                        - PMA_ARBITRARY=1
+volumes:
+        db-data:                 
