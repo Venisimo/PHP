@@ -1,29 +1,22 @@
 <?php
-    class Student {
-        protected $name;
-        protected $surname;
-        protected $age;
+    require_once 'user.php';
 
-        public function __construct($n, $s, $a) {
+    class Student extends User {
+        public $rate;
+
+        public function __construct($n, $s, $a, $r) {
             $this->setInfo($n, $s, $a);
+            $this->rate = $r;
+        }
+        public function show() {
+            echo 'Фамилия: '.$this->surname.'<br>';
+            echo 'Имя: '.$this->name.'<br>';
+            echo 'Возраст: '.$this->age.'<br>';
+            echo 'Рейтинг: '.$this->rate.'<br>'.'<br>';
+        }  
+        public function getRate() {
+            return $this->rate;
+        } 
     }
+?> 
 
-    public function show() {
-        echo 'Фамилия: '. $this->surname. '<br>';
-        echo 'Имя: '. $this->name. '<br>';
-        echo 'Возраст: '. $this->age. '<br>';
-    }
-
-    protected function setInfo($n, $s, $a) {
-        $this->name = $n;
-        $this->surname = $s;
-        $this->age = $a;
-    }
-
-    public function getName() {
-        return $this->name;
-    }
-    public function getSurname() {
-        return $this->surname;
-    }
-}

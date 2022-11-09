@@ -1,6 +1,7 @@
 <?php
     require_once 'Student.php';
     require_once 'Group.php';
+    require_once 'user.php';
 
     $i04 = new Group('И-04');
 
