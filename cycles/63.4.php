@@ -7,7 +7,7 @@
     $arr_key[] = $key;{
     $arr_val[] = $elem;
     }
-        var_dump($arr_key);
-        var_dump($arr_val);
     }
+    var_dump($arr_key).'<br>';
+        var_dump($arr_val);
 ?>
