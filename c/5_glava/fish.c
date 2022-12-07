@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "fish.h"
+#include <fish.h>
 
 void catalog(fish f) {
     printf("%s - это %s с %d зубами, ему %d лет\n",
