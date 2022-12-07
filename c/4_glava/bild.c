@@ -21,6 +21,6 @@ int main()
         printf("Цена блюда: ");
     }
     printf("\nИтоговый счет: %.2f\n", total);
-    printf("Количество блюдЖ %hi\n", count);
+    printf("Количество блюд: %hi\n", count);
     return 0;
 }
